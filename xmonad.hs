@@ -257,7 +257,7 @@ myLayoutHook = avoidStruts $ mouseResize $ windowArrange $ T.toggleLayouts float
 -- WORKSPACES
 
 -- myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 "]
-myWorkspaces = [" web ", " chat ", " dev ", " term ", " doc ", " mus ", " game ", " steam ", " extra "]
+myWorkspaces = [" web ", " chat ", " dev ", " term ", " doc ", " mus ", " game ", " steam ", " gfx "]
 myWorkspaceIndices = M.fromList $ zipWith (,) myWorkspaces [1..] -- (,) == \x y -> (x,y)
 
 clickable ws = "<action=xdotool key super+"++show i++">"++ws++"</action>"
