@@ -124,6 +124,7 @@ myStartupHook = do
     spawn "killall conky"   -- kill current conky on each restart
     spawn "killall trayer"  -- kill current trayer on each restart
 
+    spawnOnce "dunst" -- Notification Manager
     spawnOnce "nitrogen --restore &"
     spawnOnce "compton &"
     spawnOnce "$HOME/screen.sh &"
