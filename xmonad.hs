@@ -364,11 +364,13 @@ myKeys =
 
     --take a screenshot of entire display
         , ("M-<Print>", spawn "scrot $HOME/Pictures/screenshots/screen_%Y-%m-%d-%H-%M-%S.png -d 1")
+        , ("M-S-s", spawn "flameshot gui")
 
-   --take a screenshot of focused window
-        , ("M-C-<Print>", spawn "scrot $HOME/Pictures/screenshots/window_%Y-%m-%d-%H-%M-%S.png -d 1-u")
+    -- Lock
+        , ("M-S-l", spawn "i3lock -i /home/martin/Pictures/Wallpapers/double_monitor/portal.png")
+
         ]
-    -- The following lines are needed for named scratchpads.
+   -- The following lines are needed for named scratchpads.
           where nonNSP          = WSIs (return (\ws -> W.tag ws /= "NSP"))
                 nonEmptyNonNSP  = WSIs (return (\ws -> isJust (W.stack ws) && W.tag ws /= "NSP"))
 -- END_KEYS
